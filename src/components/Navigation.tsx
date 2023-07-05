@@ -28,8 +28,8 @@ export default function Navigation({ props, sendPropBack} : navProps) {
           variants={container}
           initial="hidden"
           animate={`${state ? 'show': 'hidden'}`}
-          className={`h-full  w-full flex font-krona justify-center flex-col min-w-44 fixed z-10 content-center bg-transparent overflow-hidden `}>
-            <div className={`text-5xl hover:scale-110 transition-all duration-700 font-bold mb-4 overflow-hidden text-center hover:cursor-pointer`}>
+          className={`h-full  w-full flex  font-krona justify-center flex-col min-w-44 fixed z-10 content-center bg-transparent overflow-hidden `}>
+            <div className={`text-6xl hover:scale-110 transition-all duration-700 font-bold mb-8 overflow-hidden text-center hover:cursor-pointer`}>
                 <Link
                     activeClass="active"
                     activeStyle={{textDecoration: 'none', color:'black'}}
@@ -39,9 +39,9 @@ export default function Navigation({ props, sendPropBack} : navProps) {
                     offset={-70}
                     duration={1000}
                   >
-                  <m.p onClick={sendBackState} variants={item}>services</m.p></Link>
+                  <m.p onClick={sendBackState} className='font-thin uppercase' variants={item}>menu</m.p></Link>
                 </div>
-                <div className={`text-5xl hover:scale-110 transition-all duration-700 font-bold overflow-hidden mt-4 mb-4 text-center hover:cursor-pointer`}>
+                <div className={`text-6xl hover:scale-110 transition-all duration-700 font-bold overflow-hidden mt-4 mb-8 text-center hover:cursor-pointer`}>
                     <Link
                     activeClass="active"
                     activeStyle={{textDecoration: 'none', color:'black'}}
@@ -50,20 +50,9 @@ export default function Navigation({ props, sendPropBack} : navProps) {
                     smooth={true}
                     offset={-70}
                     duration={2000}
-                  ><m.p onClick={sendBackState} variants={item}>about</m.p></Link>
+                  ><m.p onClick={sendBackState} className='font-thin uppercase'  variants={item}>shops</m.p></Link>
                 </div>
-                <div className={`text-5xl hover:scale-110 transition-all duration-700 font-bold mt-4 mb-4 text-center overflow-hidden hover:cursor-pointer`}>
-                    <Link
-                    activeClass="active"
-                    activeStyle={{textDecoration: 'none', color:'black'}}
-                    to="blog"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={2000}
-                  ><m.p onClick={sendBackState} variants={item}>blog</m.p></Link>
-                </div>
-                <div className={`text-5xl hover:scale-110 transition-all duration-700 font-bold overflow-hidden  mt-4 text-center hover:cursor-pointer`}>
+                <div className={`text-6xl hover:scale-110 transition-all duration-700 font-bold overflow-hidden  mt-4 mb-8 text-center hover:cursor-pointer`}>
                     <Link
                     activeClass="active"
                     activeStyle={{textDecoration: 'none', color:'black'}}
@@ -72,10 +61,23 @@ export default function Navigation({ props, sendPropBack} : navProps) {
                     smooth={true}
                     offset={-70}
                     duration={2000}
-                  ><m.p onClick={sendBackState} variants={item}>contact</m.p></Link>
+                  ><m.p onClick={sendBackState} className='font-thin uppercase' variants={item}>about</m.p></Link>
+                </div>
+                <div className={`text-6xl hover:scale-110 transition-all duration-700 font-bold overflow-hidden  mt-4 mb-4 text-center hover:cursor-pointer`}>
+                    <Link
+                    activeClass="active"
+                    activeStyle={{textDecoration: 'none', color:'black'}}
+                    to="contact-page"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={2000}
+                  ><m.p onClick={sendBackState} className='font-thin uppercase' variants={item}>contact</m.p></Link>
                 </div>
                 <div className='flex text-5xl overflow-hidden justify-center'>
                   <m.a variants={item} className='p-4 overflow-hidden' href='https://www.instagram.com/digital.presence_/'><InstagramIcon className='text-[40px] hover:scale-110 transition-all duration-700'/></m.a>
+                  <m.a variants={item} className='p-4 overflow-hidden' href='https://twitter.com/jjhardwicke'><TwitterIcon className='text-[40px] hover:scale-110 transition-all duration-700'/></m.a>
+                  <m.a variants={item} className='p-4 overflow-hidden' href='https://www.facebook.com/jjhardwicke/?locale=en_GB'><FacebookIcon className='text-[40px] hover:scale-110 transition-all duration-700'/></m.a>
                 </div>
             </m.div>
     </div>

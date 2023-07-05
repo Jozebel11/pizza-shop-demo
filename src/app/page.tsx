@@ -6,6 +6,8 @@ import Navigation from '@/components/Navigation';
 import { Link, animateScroll as scroll } from "react-scroll";
 import Intro from '@/components/Home'
 import localFont from '@next/font/local'
+import OrderCard from '@/components/OrderCard';
+import Footer from '@/components/Footer';
 
 const fridayLovers = localFont({
   src: [
@@ -176,14 +178,19 @@ const handleData = (data: boolean) => {
         </button>
       </div>
       <div className={`${sideNavState ? 'blur-lg min-w-full transition duration-500 m-0 p-0 ': 'min-w-full'}`}>
+        <div className='relative min-h-screen'>
         <video
                autoPlay
                muted
+               playsInline
                className='absolute top-0 left-0 w-full z-[0] min-h-0 }'
 
-               > <source src="../video/header-toppings.mp4"
+               ><source  src="../video/header-toppings.mp4"
                type="video/mp4"/></video>
         <Intro/>
+        <OrderCard/>
+        </div>
+        <Footer/>
       </div>
     </main>
   )
